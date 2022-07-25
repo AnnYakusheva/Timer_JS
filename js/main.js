@@ -10,6 +10,19 @@ const millisecondElement = document.querySelector('.milliseconds')
 const startButton = document.querySelector('.start')
 const stopButton = document.querySelector('.stop')
 const pauseButton = document.querySelector('.pause')
+const newButton = document.querySelector('.new')
+const cleanResultsButton = document.querySelector('.results__clean')
+
+//Variables
+
+const results = document.querySelector('.results')
+
+let hours = 00,
+    minutes = 00,
+    seconds = 00,
+    milliseconds = 00,
+    interval,
+    resultsCounter = 0
 
 //Listeners
 
@@ -27,13 +40,25 @@ stopButton.addEventListener('click', () => {
     clearFields()
 })
 
-//Variables
+newButton.addEventListener('click', () => {
+    clearInterval(interval)
+    resultsCounter++
+    const resultsBlock = document.querySelector('.results__block')
+    resultsBlock.classList.add('visible')
+    const block = document.createElement('div')
+    block.classList.add('results__info')
+    block.innerText = `Result ${resultsCounter}: ${hours}:${minutes}:${seconds}:${milliseconds}`
+    results.append(block)
+    clearFields()
+    clearInterval(interval)
+    interval = setInterval(startTimer, 10)
+})
 
-let hours = 00,
-    minutes = 00,
-    seconds = 00,
-    milliseconds = 00,
-    interval 
+cleanResultsButton.addEventListener('click', () => {
+    results.innerText = ''
+    resultsCounter = 0
+    clearFields()
+})
 
 function startTimer() {
     //Milliseconds
