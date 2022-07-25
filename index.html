@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title></title>
+        <title>TimerJS</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style.css" rel="stylesheet">
@@ -12,29 +12,39 @@
     </head>
     <body>
         <div class="container">
+            <div class="title">Timer</div>
             <div class="timer">
                 <div class="timer__block">
                     <div class="time hours">00</div>
-                    <div class="title">Hours</div>
+                    <div class="timer__title">Hours</div>
                 </div>
                 <div class="timer__block">
                     <div class="time minutes">00</div>
-                    <div class="title">Minutes</div>
+                    <div class="timer__title">Minutes</div>
                 </div>
                 <div class="timer__block">
                     <div class="time seconds">00</div>
-                    <div class="title">Seconds</div>
+                    <div class="timer__title">Seconds</div>
                 </div>
                 <div class="timer__block">
                     <div class="time milliseconds">00</div>
-                    <div class="title">Milliseconds</div>
+                    <div class="timer__title">Milliseconds</div>
                 </div>
             </div>
             <div class="buttons">
                 <button class="button start">Start</button>
                 <button class="button pause">Pause</button>
                 <button class="button stop">Stop</button>
+                <button class="button new">New</button>
             </div>
+        </div>
+        <div class="results__block">
+            <div class="results__header">
+                <div class="results__title">Results</div>
+                <div class="results__clean">Clean</div>
+            </div>
+            
+            <div class="results"></div>
         </div>
 
     <script src="js/main.js"></script>

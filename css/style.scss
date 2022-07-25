@@ -12,7 +12,15 @@ $mainColor2: #1059b8;
     width: 60%;
     height: 100%;
     margin: 0 auto;
-    margin-top: 150px;
+    margin-top: 50px;
+}
+
+.title {
+    font-size: 60px;
+    color: $mainColor2;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 60px;
 }
 
 .timer {
@@ -35,7 +43,7 @@ $mainColor2: #1059b8;
             font-size: 95px;
         }
 
-        .title {
+        .timer__title {
             background-color: $mainColor2;
             padding: 5px;
             border-bottom-right-radius: 10px;
@@ -72,7 +80,7 @@ $mainColor2: #1059b8;
             }
         }
 
-        &.pause {
+        &.pause, &.new {
             color: $mainColor1;
 
             &:hover {
@@ -81,4 +89,41 @@ $mainColor2: #1059b8;
             }
         }
     }
+}
+
+.results__block {
+    display: none;
+    width: 250px;
+    border: 1px solid $mainColor2;
+    color: $mainColor1;
+    font-size: 18px;
+    padding: 15px;
+    margin: 50px auto 20px;
+
+
+    .results__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .results__clean {
+        font-size: 13px;
+        color: #7ea7dc;
+        transition: .3s ease-in-out;
+        cursor: pointer;
+        
+        &:hover {
+            color: $mainColor1;
+        }
+    }
+
+    .results__info {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+}
+
+.visible {
+    display: block;
 }
